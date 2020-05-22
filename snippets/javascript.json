@@ -1,0 +1,536 @@
+{
+  // 変数
+  "const": {
+    "prefix": "c",
+    "body": [
+      "const $1"
+    ],
+    "description": "定数"
+  },
+  "let": {
+    "prefix": "l",
+    "body": [
+      "let $1"
+    ],
+    "description": "変数"
+  },
+  "var": {
+    "prefix": "v",
+    "body": [
+      "var $1"
+    ],
+    "description": "変数"
+  },
+  "console.log": {
+    "prefix": "con",
+    "body": [
+      "console.log(${1:val})"
+    ],
+    "description": "console.log"
+  },
+  "console.dir": {
+    "prefix": "con",
+    "body": [
+      "console.dir(${1:obj})"
+    ],
+    "description": "console.dir"
+  },
+  "console.log show all": {
+    "prefix": "con",
+    "body": [
+      "console.log(JSON.stringify(${1:obj}))"
+    ],
+    "description": "console.log show all"
+  },
+  "alert": {
+    "prefix": "al",
+    "body": [
+      "alert(${1:message})"
+    ],
+    "description": "alert"
+  },
+  "debugger": {
+    "prefix": "deb",
+    "body": [
+      "debugger"
+    ],
+    "description": "debugger"
+  },
+  "for": {
+    "prefix": "for",
+    "body": [
+      "for (let ${1:i} = 0; ${1:i} < ${2:count}; ++${1:i}) {",
+      "  ${3}",
+      "}"
+    ],
+    "description": "for in"
+  },
+  "for in": {
+    "prefix": "for in",
+    "body": [
+      "for (let key in ${1:obj}s) {",
+      "  const ${1:obj} = ${1:obj}s[key]",
+      "}"
+    ],
+    "description": "for in"
+  },
+  "for of": {
+    "prefix": "for o",
+    "body": [
+      "for (let val of ${1:arr}) {",
+      "  ",
+      "}"
+    ],
+    "description": "for of"
+  },
+  "forEach": {
+    "prefix": "for e",
+    "body": [
+      "Object.keys(${1:obj}).forEach(key => {",
+      "  ",
+      "})"
+    ],
+    "description": "forEach"
+  },
+  "Object keys": {
+    "prefix": "ob",
+    "body": [
+      "Object.keys(${1:obj})"
+    ],
+    "description": "Object keys"
+  },
+  "Object values": {
+    "prefix": "ob",
+    "body": [
+      "Object.values(${1:obj})"
+    ],
+    "description": "Object values"
+  },
+  "Array from": {
+    "prefix": "arr",
+    "body": [
+      "Array.from(${1:arr})"
+    ],
+    "description": "array deepcopy"
+  },
+  "Object create": {
+    "prefix": "ob",
+    "body": [
+      "Object.create(${1:obj})"
+    ],
+    "description": "object deepcopy"
+  },
+  "delete": {
+    "prefix": "del",
+    "body": [
+      "delete ",
+    ],
+    "description": "delete"
+  },
+  "continue": {
+    "prefix": "cont",
+    "body": [
+      "continue",
+    ],
+    "description": "continue"
+  },
+  "break": {
+    "prefix": "br",
+    "body": [
+      "break",
+    ],
+    "description": "break"
+  },
+  "switch": {
+    "prefix": "switch",
+    "body": [
+      "switch (${1:val}) {",
+      "  case ${2:match}:",
+      "    break",
+      "  default:",
+      "}"
+    ],
+    "description": "switch"
+  },
+  "if": {
+    "prefix": "if",
+    "body": [
+      "if (${1}) {",
+      "  ",
+      "}",
+    ],
+    "description": "while"
+  },
+  "while": {
+    "prefix": "while",
+    "body": [
+      "while (${1}) {",
+      "  ",
+      "}",
+    ],
+    "description": "while"
+  },
+  "do while": {
+    "prefix": "do while",
+    "body": [
+      "do {",
+      "  ",
+      "} while (${1})",
+    ],
+    "description": "do while"
+  },
+  "try catch": {
+    "prefix": "try",
+    "body": [
+      "try {",
+      "  ",
+      "} catch (e) {",
+      "  ",
+      "}",
+    ],
+    "description": "try catch"
+  },
+  // 配列操作
+  "map": {
+    "prefix": "map",
+    "body": [
+      "${1:[]}.map((${2:val}) => ${2:val})"
+    ],
+    "description": "map"
+  },
+  "find": {
+    "prefix": "find",
+    "body": [
+      "${1:[]}.find((${2:val}) => ${2:val} === true)"
+    ],
+    "description": "find"
+  },
+  "filter": {
+    "prefix": "filter",
+    "body": [
+      "${1:[]}.filter((${2:val}) => ${2:val} === true)"
+    ],
+    "description": "filter"
+  },
+  "concat": {
+    "prefix": "concat",
+    "body": [
+      "${1:[]}.concat(${2:[]})"
+    ],
+    "description": "concat"
+  },
+  "join": {
+    "prefix": "join",
+    "body": [
+      "${1:[]}.join('${2:,}')"
+    ],
+    "description": "join"
+  },
+  "split": {
+    "prefix": "split",
+    "body": [
+      "${1:''}.split('${2:,}')"
+    ],
+    "description": "split"
+  },
+  "reduce": {
+    "prefix": "reduce",
+    "body": [
+      "${1:[]}.reduce((sum, current) => sum + ${2:current}, 0)"
+    ],
+    "description": "reduce"
+  },
+  "includes": {
+    "prefix": "includes",
+    "body": [
+      "${1:[]}.includes(${2:val})"
+    ],
+    "description": "includes"
+  },
+  "sort": {
+    "prefix": "sort",
+    "body": [
+      "${1:[]}.sort((a, b) => ${2:a > b})"
+    ],
+    "description": "sort"
+  },
+  "slice": {
+    "prefix": "slice",
+    "body": [
+      "${1:[]}.slice(${2:0, 5})"
+    ],
+    "description": "slice"
+  },
+  "push": {
+    "prefix": "push",
+    "body": [
+      "${1:[]}.push(${2:val})"
+    ],
+    "description": "push"
+  },
+  "pop": {
+    "prefix": "pop",
+    "body": [
+      "${1:[]}.pop()"
+    ],
+    "description": "pop"
+  },
+  "unshift": {
+    "prefix": "ushift",
+    "body": [
+      "${1:[]}.unshift(${2:val})"
+    ],
+    "description": "unshift"
+  },
+  "shift": {
+    "prefix": "shift",
+    "body": [
+      "${1:[]}.shift()"
+    ],
+    "description": "shift"
+  },
+  // 関数
+  "return": {
+    "prefix": "return",
+    "body": [
+      "return $1"
+    ],
+    "description": "return"
+  },
+  "async": {
+    "prefix": "async",
+    "body": [
+      "async $1"
+    ],
+    "description": "非同期待ち"
+  },
+  "function": {
+    "prefix": "func",
+    "body": [
+      "function ${1:name}(${2}) {",
+      "  $3",
+      "}"
+    ],
+    "description": "function"
+  },
+  "await": {
+    "prefix": "await",
+    "body": [
+      "await ${1}"
+    ],
+    "description": "非同期待ち"
+  },
+  "Promise": {
+    "prefix": "promise",
+    "body": [
+      "return new Promise((resolve, reject) => {",
+      "  $1",
+      "})"
+    ],
+    "description": "Promise"
+  },
+  // クラス
+  "class": {
+    "prefix": "cla",
+    "body": [
+      "class ${1:name} {",
+      "  constructor () {",
+      "  }",
+      "}"
+    ],
+    "description": "クラス"
+  },
+  "Math floor": {
+    "prefix": "math",
+    "body": [
+      "Math.floor(${1:num})"
+    ],
+    "description": "Math floor"
+  },
+  "Math random": {
+    "prefix": "math",
+    "body": [
+      "Math.random()"
+    ],
+    "description": "Math random"
+  },
+  // タグ
+  "div": {
+    "prefix": "div",
+    "body": [
+      "<div>$1</div>"
+    ],
+    "description": "division"
+  },
+  "a": {
+    "prefix": "a",
+    "body": [
+      "<a href='${1:url}'>${2:link}</a>"
+    ],
+    "description": "anchor link"
+  },
+  "h1〜h6": {
+    "prefix": "h",
+    "body": [
+      "<h${1:1}>${2}</h${1:1}>"
+    ],
+    "description": "h1〜h6"
+  },
+  "p": {
+    "prefix": "p",
+    "body": [
+      "<p>$1</p>"
+    ],
+    "description": "paragraph"
+  },
+  "hr": {
+    "prefix": "hr",
+    "body": [
+      "<hr/>"
+    ],
+    "description": "hr"
+  },
+  "ol": {
+    "prefix": "ol",
+    "body": [
+      "<ol>",
+      "  <li>${1:項目}</li>",
+      "  <li>${1:項目}</li>",
+      "  <li>${1:項目}</li>",
+      "</ul>"
+    ],
+    "description": "順序リスト"
+  },
+  "ul": {
+    "prefix": "ul",
+    "body": [
+      "<ul>",
+      "  <li>${1:項目}</li>",
+      "  <li>${1:項目}</li>",
+      "  <li>${1:項目}</li>",
+      "</ul>"
+    ],
+    "description": "順序なしリスト"
+  },
+  "details": {
+    "prefix": "details",
+    "body": [
+      "<details>",
+      "  <summary>${1:メニュー}</summary>",
+      "</details>",
+    ],
+    "description": "順序なしリスト"
+  },
+  // フォーム
+  "form": {
+    "prefix": "form",
+    "body": [
+      "<form action='${1:url}' method='post' enctype='multipart/form-data' accept-charset='UTF-8' >",
+      "  $2",
+      "  <input type='submit' value='送信' />",
+      "</form>"
+    ],
+    "description": "form"
+  },
+  "label": {
+    "prefix": "label",
+    "body": [
+      "<label for='${1:id}'>${2:ラベル}</label>"
+    ],
+    "description": "label"
+  },
+  "button": {
+    "prefix": "button",
+    "body": [
+      "<button name='${1:btn}' onclick='${2:alert(\"クリック\")}'>${3:Button}</button>"
+    ],
+    "description": "button"
+  },
+  "text": {
+    "prefix": "input",
+    "body": [
+      "<input type='text' name='${1:txt}' placeholder='${2:入力欄}' ${3:require} />"
+    ],
+    "description": "text入力"
+  },
+  "textarea": {
+    "prefix": "textarea",
+    "body": [
+      "<textarea name='${1:txta}'></textarea>"
+    ],
+    "description": "複数行text入力"
+  },
+  "password": {
+    "prefix": "input",
+    "body": [
+      "<input type='password' name='${1:pass}' placeholder='${2:パスワード}' require />"
+    ],
+    "description": "password"
+  },
+  "checkbox": {
+    "prefix": "input",
+    "body": [
+      "<label for='${1:chk}'><input id='${1:chk}' type='checkbox' name='${1:chk}' value='${2:value}' />${2:value}</label>",
+    ],
+    "description": "checkbox"
+  },
+  "radio": {
+    "prefix": "input",
+    "body": [
+      "<label for='${1:rad}1' class='radio-inline'><input id='${1:rad}1' type='radio' name='${1:rad}' value='${2:value}1' checked />${2:value}1</label>",
+      "<label for='${1:rad}2' class='radio-inline'><input id='${1:rad}2' type='radio' name='${1:rad}' value='${2:value}2' />${2:value}2</label>",
+      "<label for='${1:rad}3' class='radio-inline'><input id='${1:rad}3' type='radio' name='${1:rad}' value='${2:value}3' />${2:value}3</label>",
+    ],
+    "description": "checkbox"
+  },
+  "select": {
+    "prefix": "select",
+    "body": [
+      "<select name='${1:sel}'>",
+      "  <option value='${2:value}1'>${3:項目}1</option>",
+      "  <option value='${2:value}2'>${3:項目}2</option>",
+      "  <option value='${2:value}3'>${3:項目}3</option>",
+      "</select>",
+    ],
+    "description": "select"
+  },
+  // メディア
+  "img": {
+    "prefix": "img",
+    "body": [
+      "<img src='${1:https://}' />"
+    ],
+    "description": "img"
+  },
+  // Styled Components
+  "Styled Components import": {
+    "prefix": "sc",
+    "body": [
+      "import styled from 'styled-components'",
+    ],
+    "description": "Styled Components import"
+  },
+  "Styled Components": {
+    "prefix": "styled",
+    "body": [
+      "const Styled${1:MuiComponent} = styled(${1:MuiComponent})`",
+      "  && {",
+      "    ${1:style}",
+      "  }",
+      "`",
+    ],
+    "description": "Styled Components"
+  },
+  // キーフレームアニメーション
+  "keyframe animation": {
+    "prefix": "@keyframe",
+    "body": [
+      "@keyframes ${1:name} {",
+      "  0% {}",
+      "  100% {}",
+      "}",
+      "animation: ${1:name} ${2:1}s ${3:linear,ease,ease-in,ease-out,ease-in-out,steps(5,start)} ${4:infinite} ${5:alternative};",
+    ],
+    "description": "キーフレームアニメーション"
+  },
+}

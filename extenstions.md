@@ -1,6 +1,7 @@
 ```
 code --install-extension 8amjp.charactercount
 code --install-extension auchenberg.vscode-browser-preview
+code --install-extension burkeholland.simple-react-snippets
 code --install-extension CoenraadS.bracket-pair-colorizer-2
 code --install-extension ecmel.vscode-html-css
 code --install-extension formulahendry.auto-rename-tag
