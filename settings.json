@@ -12,6 +12,7 @@
   "editor.renderLineHighlight": "all", // 選択行を行番号含めすべてハイライト
   "editor.renderWhitespace": "all", // 半角スペースを常に表示
   "editor.snippetSuggestions": "top", // Emmet などのスニペット候補を優先して表示
+  "editor.tabCompletion": "on", //タブからスニペット
   "editor.tabSize": 2, // タブのサイズ変更
   "editor.wordWrap": "on", // エディターの幅で折り返し
   "emmet.showSuggestionsAsSnippets": true, // Emmet の候補を表示
@@ -31,7 +32,9 @@
   "files.trimFinalNewlines": true, // ファイルの保存時に最終行以降をトリミング
   "files.trimTrailingWhitespace": true, // ファイルの保存時に行末の空白をトリミング
   "[markdown]": {
-    "files.trimTrailingWhitespace": false // Markdown のファイルは行末の空白をトリミングしない
+    "files.trimTrailingWhitespace": false, // Markdown のファイルは行末の空白をトリミングしない
+    "editor.quickSuggestions": true, // Tab有効
+    "editor.snippetSuggestions": "top" // スニペット有効
   },
   "html.format.contentUnformatted": "pre, code, textarea, title, h1, h2, h3, h4, h5, h6, p", // タグ内の記述はフォーマットしない
   "html.format.extraLiners": "", // head, body, /html タグの前に改行を入れない
@@ -61,5 +64,5 @@
   "files.associations": {
     "*.js": "javascriptreact", //JSファイルをJSXとして開く
     "*.ts": "typescriptreact" //TSをTSXファイルとして開く
-  }
+  },
 }

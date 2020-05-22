@@ -5,14 +5,14 @@
       "<details>",
       "<summary>$1</summary>",
       "$2",
-      "</details>",
+      "</details>"
     ],
     "description": "アコーディオン"
   },
   "gif": {
     "prefix": "gif",
     "body": [
-      "![](/assets/blogImage/${1:ディレクトリ})",
+      "![](/assets/blogImage/${1:ディレクトリ})"
     ],
     "description": "gifはここから"
   },
@@ -20,8 +20,34 @@
     "prefix": "balloon",
     "body": [
       "[[balloon]]",
-      "|",
+      "|"
     ],
     "description": "吹き出し"
   },
+  "table": {
+    "prefix": "table",
+    "body": [
+      "|${1}|${2}|",
+      "|----|----|",
+      "|||",
+      "|||"
+    ],
+    "description": "テーブル"
+  },
+  "metadata": {
+    "prefix": "metadata",
+    "body": [
+      "---",
+      "template: BlogPost",
+      "path: /hoge",
+      "date: 2020-05-20T00:00:00.000Z",
+      "title: ",
+      "category: dev",
+      "thumbnail: /assets/eyeCatch/book.png",
+      "metaDescription: ",
+      "tags: [\"ブログ\", \"WordPress\", \"目次\"]",
+      "---"
+    ],
+    "description": "メタデータ各種"
+  }
 }
