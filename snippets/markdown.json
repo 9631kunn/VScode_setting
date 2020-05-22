@@ -1,0 +1,27 @@
+{
+  "details": {
+    "prefix": "details",
+    "body": [
+      "<details>",
+      "<summary>$1</summary>",
+      "$2",
+      "</details>",
+    ],
+    "description": "アコーディオン"
+  },
+  "gif": {
+    "prefix": "gif",
+    "body": [
+      "![](/assets/blogImage/${1:ディレクトリ})",
+    ],
+    "description": "gifはここから"
+  },
+  "balloon": {
+    "prefix": "balloon",
+    "body": [
+      "[[balloon]]",
+      "|",
+    ],
+    "description": "吹き出し"
+  },
+}
